@@ -99,9 +99,11 @@ export function handleItemListed(event: ItemListedEvent): void {
   itemListed.save();
 
   // update and save activeItem object values
+  const noBuyer = "0x0000000000000000000000000000000000000000";
   activeItem.seller = event.params.seller;
   activeItem.nftAddress = event.params.nftAddress;
   activeItem.tokenId = event.params.tokenId;
   activeItem.price = event.params.price;
+  activeItem.buyer = Address.fromString(noBuyer);
   activeItem.save();
 }
