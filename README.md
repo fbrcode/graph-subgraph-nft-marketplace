@@ -109,3 +109,38 @@ Deployed to https://thegraph.com/studio/subgraph/nft-marketplace
 Subgraph endpoints:
 Queries (HTTP):     https://api.studio.thegraph.com/query/32189/nft-marketplace/v0.0.1
 ```
+
+Second run after buyer address fix:
+
+```txt
+✔ Version Label (e.g. v0.0.1) · v0.0.2
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+  Skip migration: Bump mapping apiVersion from 0.0.5 to 0.0.6
+  Skip migration: Bump manifest specVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump manifest specVersion from 0.0.2 to 0.0.4
+✔ Apply migrations
+✔ Load subgraph from subgraph.yaml
+  Compile data source: NftMarketplace => build/NftMarketplace/NftMarketplace.wasm
+✔ Compile subgraph
+  Copy schema file build/schema.graphql
+  Write subgraph file build/NftMarketplace/abis/NftMarketplace.json
+  Write subgraph manifest build/subgraph.yaml
+✔ Write compiled subgraph to build/
+  Add file to IPFS build/schema.graphql
+                .. QmWfb1cUHVYWEFCVpDr3bwf82vqcem8GctiJbEYPzYUuvk
+  Add file to IPFS build/NftMarketplace/abis/NftMarketplace.json
+                .. QmZnt5GsD6MwafLH2RUkv5yBQhdK3p2ABXZ2EUpafQKpLH
+  Add file to IPFS build/NftMarketplace/NftMarketplace.wasm
+                .. QmUPaSPF18NcynPCGfC3CCoxp6Fscb2dbZKRUZDAYUPqjQ
+✔ Upload subgraph to IPFS
+
+Build completed: QmcWDhdNkdP2NdkGEMMb6X8DRfCQVPjzEgmAVnpxA9bsTM
+
+Deployed to https://thegraph.com/studio/subgraph/nft-marketplace
+
+Subgraph endpoints:
+Queries (HTTP):     https://api.studio.thegraph.com/query/32189/nft-marketplace/v0.0.2
+```
