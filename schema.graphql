@@ -1,6 +1,38 @@
-type ExampleEntity @entity {
-  id: ID!
-  count: BigInt!
+# type ExampleEntity @entity {
+#   id: ID!
+#   count: BigInt!
+#   buyer: Bytes! # address
+#   nftAddress: Bytes! # address
+# }
+
+type ActiveItem @entity {
+  id: ID! # must have an ID
+  buyer: Bytes! # address -> 0x0000... if no one bought it yet
+  seller: Bytes! # address
+  nftAddress: Bytes! # address
+  tokenId: BigInt! # token id
+  price: BigInt # price in wei (not required)
+}
+
+type ItemListed @entity {
+  id: ID! # must have an ID
+  seller: Bytes! # address
+  nftAddress: Bytes! # address
+  tokenId: BigInt! # token id
+  price: BigInt # price in wei (not required)
+}
+
+type ItemCanceled @entity {
+  id: ID! # must have an ID
+  seller: Bytes! # address
+  nftAddress: Bytes! # address
+  tokenId: BigInt! # token id
+}
+
+type ItemBought @entity {
+  id: ID! # must have an ID
   buyer: Bytes! # address
   nftAddress: Bytes! # address
+  tokenId: BigInt! # token id
+  price: BigInt # price in wei (not required)
 }
